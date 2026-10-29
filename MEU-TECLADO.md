@@ -47,6 +47,8 @@ Firmware baixado: `~/Downloads/sofle-firmware`
 system_profiler SPUSBHostDataType | grep -A6 "nice!nano:"
 ```
 
+![Layout](sofle-layout.png)
+
 ## Layout atual (Mac, "Brasileiro – Pro")
 
 Legenda impressa nas teclas entre parênteses (kit genérico, não bate com tudo).
