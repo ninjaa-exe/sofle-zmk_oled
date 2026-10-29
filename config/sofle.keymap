@@ -14,18 +14,28 @@
 #define LOWER 1
 #define RAISE 2
 #define ADJUST 3
+#define BOOT_R 4
 
 / {
 
-    // Bootloader combos (left half only: combos always run on the central/left half)
-    // Press ` + ESC + TAB together to put the LEFT half in flashing mode.
-    // For the RIGHT half: hold LOWER + RAISE and press the right-most home row key (').
+    // Bootloader shortcuts (no need to open the case to reach RST).
+    // Combos always run on the central (left) half, so:
+    // LEFT half:  press ` + ESC + TAB together.
+    // RIGHT half: hold the two top outer keys (- and BKSPC), then press '.
+    //             The combo only enables the BOOT_R layer; the ' key press
+    //             comes from the right half, so the right half resets.
+    // Backup: hold LOWER + RAISE and press TAB (left) or ' (right).
     combos {
         compatible = "zmk,combos";
         combo_bootloader_left {
             timeout-ms = <80>;
             key-positions = <0 12 24>;
             bindings = <&bootloader>;
+        };
+        combo_boot_layer_right {
+            timeout-ms = <80>;
+            key-positions = <11 23>;
+            bindings = <&mo BOOT_R>;
         };
     };
 
@@ -113,6 +123,17 @@
 &bootloader       &rgb_ug RGB_BRD &rgb_ug RGB_BRI &none           &none           &none                                   &none &none &none &none &none &bootloader
 &none             &none           &none           &none           &none           &none            &rgb_ug RGB_TOG &none  &none &none &none &none &none &none
                                   &none           &none           &none           &none            &none           &none  &none &none &none &none
+            >;
+        };
+
+        boot_right_layer {
+            display-name = "boot_r";
+            bindings = <
+&trans &trans &trans &trans &trans &trans                &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans                &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans                &trans &trans &trans &trans &trans &bootloader
+&trans &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans &trans
+              &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans
             >;
         };
 
