@@ -100,14 +100,14 @@
             display-name = "lower";
 // ------------------------------------------------------------------------------------------------------------
 // |       |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
-// |   `   |  á  |  é  |  í   |  ó   |  ú   |                   |  ã   |  õ    |  â    |  ê   |   ô   |  F12  |
-// |       |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   |   |
+// |   `   |  !  |  é  |  í   |  ó   |  ú   |                   |  ã   |  õ    |  â    |  ê   |   ô   |  F12  |
+// |       |  á  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   |   |
 // |       |  =  |  -  |  ç   |  {   |  }   |        |  |       |  [   |  ]    |  ;    |  :   |   \   |       |
 //               |     |      |      |      |        |  |       |      |       |       |      |
             bindings = <
 &trans    &kp F1      &kp F2      &kp F3      &kp F4      &kp F5                     &kp F6      &kp F7      &kp F8     &kp F9     &kp F10    &kp F11
-&kp GRAVE ACUTE(A)    ACUTE(E)    ACUTE(I)    ACUTE(O)    ACUTE(U)                   TILDE(A)    TILDE(O)    CIRC(A)    CIRC(E)    CIRC(O)    &kp F12
-&trans    &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT                  &kp CARET   &kp AMPS    &kp ASTRK  &kp LPAR   &kp RPAR   &kp PIPE
+&kp GRAVE &kp EXCL    ACUTE(E)    ACUTE(I)    ACUTE(O)    ACUTE(U)                   TILDE(A)    TILDE(O)    CIRC(A)    CIRC(E)    CIRC(O)    &kp F12
+&trans    ACUTE(A)    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT                  &kp CARET   &kp AMPS    &kp ASTRK  &kp LPAR   &kp RPAR   &kp PIPE
 &trans    &kp EQUAL   &kp MINUS   CEDIL       &kp LBRC    &kp RBRC    &trans &trans  &kp LBKT    &kp RBKT    &kp SEMI   &kp COLON  &kp BSLH   &trans
                       &trans      &trans      &trans      &trans      &trans &trans  &trans      &trans      &trans     &trans
             >;
